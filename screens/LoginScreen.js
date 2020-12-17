@@ -1,7 +1,5 @@
 import * as React from 'react';
 import {Text,View,TouchableOpacity, StyleSheet,TextInput,KeyboardAvoidingView,Image,Alert} from 'react-native';
-
-
 export default class LoginScreen extends React.Component {
    
    constructor(){
@@ -17,7 +15,7 @@ export default class LoginScreen extends React.Component {
             try{
             const response = await firebase.auth().signInWithEmailAndPassword(email,password)
             if(response){
-                this.props.navigation.navigate("Transaction")
+                this.props.navigation.navigate('Transaction')
             }
             }
             catch(error){
